@@ -46,12 +46,12 @@ namespace VerifySiteAttributes
 
             try
             {
+                progressBar1.Visible = true;
                 var rs = new XmlReaderConfig();
                 var ra = new XmlReaderConfig();
                 rs.GetParameters(FileSites, Sites, "site");
                 ra.GetParameters(FileTags, Tags, "tag");
 
-                progressBar1.Visible = true;
                 ClearWebBrowser();
                 using (Web = new WebBrowser())
                 {

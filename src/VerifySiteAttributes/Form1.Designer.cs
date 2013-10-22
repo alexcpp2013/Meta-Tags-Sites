@@ -36,11 +36,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tbSites = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.panel3 = new System.Windows.Forms.Panel();
             this.rtbReport = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bClose = new System.Windows.Forms.Button();
             this.ofdSites = new System.Windows.Forms.OpenFileDialog();
@@ -93,6 +93,7 @@
             this.tbTags.ReadOnly = true;
             this.tbTags.Size = new System.Drawing.Size(644, 20);
             this.tbTags.TabIndex = 16;
+            this.tbTags.Text = "tags.xml";
             // 
             // btNUnit
             // 
@@ -120,6 +121,7 @@
             this.tbSites.ReadOnly = true;
             this.tbSites.Size = new System.Drawing.Size(644, 20);
             this.tbSites.TabIndex = 18;
+            this.tbSites.Text = "sites.xml";
             // 
             // groupBox2
             // 
@@ -134,6 +136,18 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Обработка данных";
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(630, 63);
+            this.progressBar1.MarqueeAnimationSpeed = 25;
+            this.progressBar1.Maximum = 25;
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(155, 23);
+            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.progressBar1.TabIndex = 4;
+            this.progressBar1.UseWaitCursor = true;
+            this.progressBar1.Visible = false;
             // 
             // panel3
             // 
@@ -173,18 +187,6 @@
             this.button1.Text = "Старт";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(630, 63);
-            this.progressBar1.MarqueeAnimationSpeed = 25;
-            this.progressBar1.Maximum = 25;
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(155, 23);
-            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
-            this.progressBar1.TabIndex = 4;
-            this.progressBar1.UseWaitCursor = true;
-            this.progressBar1.Visible = false;
             // 
             // panel1
             // 
