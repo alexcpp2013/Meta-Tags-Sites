@@ -64,7 +64,7 @@ namespace VerifySiteAttributes
                         Attributes.Clear();
                         
                         LoadSite(s);
-                        GetAttributes();
+                        GetAttributes("META", "NAME", "CONTENT");
 
                         foreach (var t in Tags)
                         {
@@ -164,21 +164,21 @@ namespace VerifySiteAttributes
             }
         }
 
-        protected void GetAttributes()
+        protected void GetAttributes(string head = "META", string name = "NAME", string content = "CONTENT")
         {
             Attributes.Clear();
 
-            var elems = Web.Document.GetElementsByTagName("META");
+            var elems = Web.Document.GetElementsByTagName(head);
             try
             {
                 if (elems != null)
                 {
                     foreach (HtmlElement elem in elems)
                     {
-                        String nameStr = elem.GetAttribute("NAME");
+                        String nameStr = elem.GetAttribute(name);
                         if (nameStr != null && nameStr.Length != 0)
                         {
-                            String contentStr = elem.GetAttribute("CONTENT");
+                            String contentStr = elem.GetAttribute(content);
                             Attributes.Add(new Tuple<string, string>(nameStr, contentStr));
                         }
                     }
